@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  /*Primary*/
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /*Neutral*/
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  background-color: var(--very-light-gray);
+  font-size: 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: salmon;
+  border-radius: 1rem;
+  margin: 8rem 0;
+  overflow: hidden;
+  width: 90%;
+  max-width: 60rem;
+}
+
+.card__icon {
+  display: block;
+}
+
+.card__heading {
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+
+.card__paragraph {
+  color: var(--transparent-white);
+  font-family: 'Lexend Deca', sans-serif;
+  margin-bottom: 2.5rem;
+  line-height: 1.5em;
+}
+
+.card__section {
+  padding: 5rem;
+}
+
+.card__left {
+  background-color: var(--bright-orange);
+}
+
+.card__left .card__button {
+  color: var(--bright-orange);
+}
+
+.card__middle {
+  background-color: var(--dark-cyan);
+}
+
+.card__middle .card__button {
+  color: var(--dark-cyan);
+}
+
+.card__right {
+  background-color: var(--very-dark-cyan);
+}
+
+.card__right .card__button {
+  color: var(--very-dark-cyan);
+}
+
+.card__button {
+  background-color: var(--very-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  height: 4.5rem;
+  width: 13rem;
+  border: none;
+  border-radius: 10rem;
+}
+
+.card__button:hover {
+  background-color: initial;
+  color: var(--very-light-gray);
+  cursor: pointer;
+  border: 0.3rem solid var(--very-light-gray);
+}
+
+@media (min-width: 992px) {
+  .card {
+    display: flex;
+    max-width: 92rem;
+  }
+
+  .card__paragraph {
+    margin-bottom: 8rem;
+  }
+}
